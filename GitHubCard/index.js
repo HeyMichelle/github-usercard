@@ -4,10 +4,14 @@
 */
 axios.get('https://api.github.com/users/HeyMichelle')
   .then( response => {
-    console.log(response);// deal with the response data in here
+    console.log(response);
+    const userCard = document.querySelector('.card');
+    const myInfo = response.data;
+    const myCardInfo = createCard(myInfo);
+    userCard.appendChild(myCardInfo)
   })
   .catch( err => {
-    console.log("Error:", err);
+    console.log("Error: ", err);
   })
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
@@ -33,7 +37,8 @@ axios.get('https://api.github.com/users/HeyMichelle')
 
 const followersArray = [];
 
-const userCard = document.querySelector('.card');
+
+
 function createCard(data) {
   const card = document.createElement('div');
   card.classList.add('card');
@@ -82,8 +87,8 @@ function createCard(data) {
     console.log(card);
     return card;
 }
-
-userCard.appendChild(card);
+const userCard = document.querySelector('.card');
+userCard.appendChild(createCard(myInfo))
 /* Step 3: Create a function that accepts a single object as its only argument,
           Using DOM methods and properties, create a component that will return the following DOM element:
 
