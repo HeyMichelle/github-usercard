@@ -59,7 +59,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: linear-gradient(141deg, #82c4a7 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 .container {
   max-width: 800px;
@@ -69,6 +69,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 
 .header {
   width: 100%;
@@ -92,7 +93,7 @@ body {
 }
 
 .card {
-  width: 100%;
+  width: 150%;
   padding: 20px;
   display: flex;
   border-radius: 5px;
@@ -122,6 +123,40 @@ body {
   font-style: italic;
   margin: 3px 0 10px;
 }
+
+
+/* .my-card {
+  width: 150%;
+  padding: 20px;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px -2px #000;
+  background-color: #FFF;
+  margin-bottom: 30px;
+}
+
+.my-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.my-card .name {
+  font-size: 3.4rem;
+}
+
+.my-card p {
+  font-size: 1.4rem;
+  margin-bottom: 3px;
+}
+
+.my-card .username {
+  font-size: 1.8rem;
+  font-style: italic;
+  margin: 3px 0 10px;
+} */
+
 
 
 
