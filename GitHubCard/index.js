@@ -14,19 +14,21 @@ axios.get('https://api.github.com/users/HeyMichelle')
   })
 
   
-
-
-/* Step 5: Now that you have your own card getting added to the DOM, either 
-          follow this link in your browser https://api.github.com/users/<Your github name>/followers 
-          , manually find some other users' github handles, or use the list found 
-          at the bottom of the page. Get at least 5 different Github usernames and add them as
-          Individual strings to the friendsArray below.
-          
-          Using that array, iterate over it, requesting data for each user, creating a new card for each
-          user, and adding that card to the DOM.
-*/
-
-const followersArray = [];
+const followersArray = ['parkcoop', 'AndriwT', 'whitneyxlachelle', 'april5622', 'rachellsincere'];
+i = 0;
+followersArray.forEach((user, i) => {
+    axios.get(`https://api.github.com/users/${followersArray[i]}`)
+        .then(response => {
+          const data = response.data;
+          const cardDiv = document.querySelector('.cards');
+          cardDiv.appendChild(createCard(data));
+            card.appendChild(cardInfo)
+        })
+        .catch(error => {
+            console.log(error)
+        });
+    console.log(followersArray);
+});
 
 
 function createCard(data) {
